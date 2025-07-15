@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="img/medkit-outline" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <title>Calculadora de IMC</title>
+  </head>
+  <body>
+    <div id="container-main">
+      <div id="container-header">
+        <h1>Calculadora de IMC</h1>
+        <p>
+          O índice de massa corporal (IMC) é uma forma simples de identificar
+          problemas relacionados ao peso, como obesidade ou desnutrição, em
+          crianças, adolescentes, adultos e idosos.
+        </p>
+      </div>
+
+      <div id="container-inputs">
+        <div id="container-sexo">
+          <h3 id="m">HOMEM</h3>
+          <h3 id="w">MULHER</h3>
+        </div>
+        <div class="input-group">
+          <label for="idade" id="i">Idade</label>
+          <div>
+            <input type="number" id="idade" placeholder="Ex: 35" />
+            <label for="idade">anos</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="altura">Altura</label>
+          <div>
+            <input type="number" id="altura" placeholder="Ex: 175" />
+            <label for="altura">cm</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="peso">Peso</label>
+          <div>
+            <input type="number" id="peso" placeholder="Ex: 72" />
+            <label for="peso">kg</label>
+          </div>
+        </div>
+
+        <div id="container-btn">
+          <button>CALCULAR</button>
+        </div>
+      </div>
+
+      <div id="container-result"></div>
+
+      <div id="container-info">
+        <h2>Tabela Referência</h2>
+        <p>
+          O IMC é calculado dividindo o peso (em kg) pela altura (em metros)
+          elevada ao quadrado. A fórmula é a seguinte:
+        </p>
+        <p>IMC = Peso (kg) / (Altura (m) * Altura (m))</p>
+
+        <div id="container-table">
+          <table>
+            <thead>
+              <tr>
+                <th>IMC</th>
+                <th>Classificação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Menor que 18,5</td>
+                <td>Magreza</td>
+              </tr>
+              <tr>
+                <td>18,5 a 24,9</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>25 a 29,9</td>
+                <td>Sobrepeso</td>
+              </tr>
+              <tr>
+                <td>30 a 34,9</td>
+                <td>Obesidade grau I</td>
+              </tr>
+              <tr>
+                <td>35 a 39,9</td>
+                <td>Obesidade grau II</td>
+              </tr>
+              <tr>
+                <td>Maior que 40</td>
+                <td>Obesidade grau III</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="obs">
+          Obs: O IMC é uma ferramenta de triagem e não deve ser usado como
+          diagnóstico definitivo.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>
