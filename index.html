@@ -9,8 +9,8 @@
     <title>Calculadora de IMC</title>
   </head>
   <body>
-    <div id="container-main">
-      <div id="container-header">
+    <div id="box-main">
+      <div id="box-header">
         <h1>Calculadora de IMC</h1>
         <p>
           O índice de massa corporal (IMC) é uma forma simples de identificar
@@ -19,8 +19,8 @@
         </p>
       </div>
 
-      <div id="container-inputs">
-        <div id="container-sexo">
+      <div id="box-inputs">
+        <div id="box-sexo">
           <h3 id="m">HOMEM</h3>
           <h3 id="w">MULHER</h3>
         </div>
@@ -46,14 +46,49 @@
           </div>
         </div>
 
-        <div id="container-btn">
+        <div id="box-btn">
           <button>CALCULAR</button>
         </div>
       </div>
 
-      <div id="container-result"></div>
+      <div id="box-result">
+        <h2>
+          <ion-icon name="checkmark-circle-outline" id="icon"></ion-icon
+          >Resultado:
+        </h2>
+        <h3>SEU IMC É DE --</h3>
+        <p>mensagem de alerta</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Magreza</td>
+              <td>< 18,5</td>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td>18,5 a 24,9</td>
+            </tr>
+            <tr>
+              <td>Sobrepeso</td>
+              <td>25 a 29,9</td>
+            </tr>
+            <tr>
+              <td>Obesidade grau I</td>
+              <td>30 a 34,9</td>
+            </tr>
+            <tr>
+              <td>Obesidade grau II</td>
+              <td>35 a 39,9</td>
+            </tr>
+            <tr>
+              <td>Obesidade grau III</td>
+              <td>> 40</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <div id="container-info">
+      <div id="box-info">
         <h2>Tabela Referência</h2>
         <p>
           O IMC é calculado dividindo o peso (em kg) pela altura (em metros)
@@ -61,7 +96,7 @@
         </p>
         <p>IMC = Peso (kg) / (Altura (m) * Altura (m))</p>
 
-        <div id="container-table">
+        <div id="box-table">
           <table>
             <thead>
               <tr>
@@ -104,6 +139,7 @@
       </div>
     </div>
   </body>
+
   <script src="script.js"></script>
   <script
     type="module"
