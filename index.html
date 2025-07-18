@@ -27,14 +27,24 @@
         <div class="input-group">
           <label for="idade" id="i">Idade</label>
           <div>
-            <input type="number" id="idade" placeholder="Ex: 35" />
+            <input
+              type="number"
+              id="idade"
+              placeholder="Ex: 35"
+              onkeydown="return isNumberKey(event)"
+            />
             <label for="idade">anos</label>
           </div>
         </div>
         <div class="input-group">
           <label for="altura">Altura</label>
           <div>
-            <input type="number" id="altura" placeholder="Ex: 175" />
+            <input
+              type="number"
+              id="altura"
+              placeholder="Ex: 175"
+              onkeydown="return isNumberKey(event)"
+            />
             <label for="altura">cm</label>
           </div>
         </div>
@@ -56,31 +66,31 @@
           <ion-icon name="checkmark-circle-outline" id="icon"></ion-icon
           >Resultado:
         </h2>
-        <h3>SEU IMC É DE --</h3>
-        <p>mensagem de alerta</p>
+        <h3 id="txt-result"></h3>
+        <p></p>
         <table>
           <tbody>
-            <tr>
+            <tr class="line">
               <td>Magreza</td>
               <td>< 18,5</td>
             </tr>
-            <tr>
+            <tr class="line">
               <td>Normal</td>
               <td>18,5 a 24,9</td>
             </tr>
-            <tr>
+            <tr class="line">
               <td>Sobrepeso</td>
               <td>25 a 29,9</td>
             </tr>
-            <tr>
+            <tr class="line">
               <td>Obesidade grau I</td>
               <td>30 a 34,9</td>
             </tr>
-            <tr>
+            <tr class="line">
               <td>Obesidade grau II</td>
               <td>35 a 39,9</td>
             </tr>
-            <tr>
+            <tr class="line">
               <td>Obesidade grau III</td>
               <td>> 40</td>
             </tr>
