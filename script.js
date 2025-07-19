@@ -15,7 +15,15 @@ w.addEventListener("click", () => {
 function isNumberKey(e) {
   return (
     (e.key >= "0" && e.key <= "9") ||
-    ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(e.key)
+    [
+      "Backspace",
+      "Delete",
+      "ArrowLeft",
+      "ArrowRight",
+      "ArrowUp",
+      "ArrowDown",
+      "Tab",
+    ].includes(e.key)
   );
 }
 
@@ -31,6 +39,10 @@ calc.addEventListener("click", () => {
   const altura = document.querySelector("#altura").value;
   const peso = document.querySelector("#peso").value;
 
+  if (!m.classList.contains("m-active") && !w.classList.contains("w-active")) {
+    alert("Selecione o sexo!");
+    return;
+  }
   if (!idade || !altura || !peso) {
     alert("Preencha todos os campos!");
     return;
@@ -70,17 +82,12 @@ calc.addEventListener("click", () => {
 
   txtResult.textContent = `Seu IMC é ${imc} e você está classificado com: ${classification}`;
 
-  formatBoxResult();
+  btnRefreshCalc();
   iconStyle(war);
+  resultMsg(war);
 });
 
-function formatBoxResult() {
-  document.querySelector("#idade").value = "";
-  document.querySelector("#altura").value = "";
-  document.querySelector("#peso").value = "";
-  m.classList.remove("m-active");
-  w.classList.remove("w-active");
-
+function btnRefreshCalc() {
   const icone = document.createElement("ion-icon");
   icone.setAttribute("name", "refresh-outline");
   calc.innerHTML = "";
@@ -95,7 +102,18 @@ function iconStyle(bool) {
     icon.classList.add("icon-red");
   } else {
     icon.classList.add("icon-green");
-    icon.style.color = green;
+  }
+}
+
+function resultMsg(bool) {
+  const txtResult = document.querySelector("#txt-message");
+
+  if (bool) {
+    txtResult.textContent =
+      "⚠️ Seu IMC está fora da faixa considerada saudável, é importante considerar uma avaliação médica para melhores orientações. Lembrando que manter um IMC saudável evita problemas de saúde como diabetes, hipertensão, desnutrição e doenças cardíacas.";
+  } else {
+    txtResult.textContent =
+      "✅ Seu IMC está dentro da faixa considerada saudável. Isso é um ótimo indicativo de equilíbrio entre peso e altura. Continue mantendo hábitos saudáveis, como alimentação equilibrada e prática regular de atividades físicas.";
   }
 }
 

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "open-sans", sans-serif;
-  background-color: rgb(254, 249, 242);
+  background-color: var(--body);
 }
 
 #box-main {
@@ -23,7 +23,7 @@ body {
   justify-content: start;
   width: 40%;
   padding: 20px;
-  background-color: white;
+  background-color: var(--box-content);
   border: solid 1px black;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
@@ -40,13 +40,13 @@ body {
     margin-right: 3%;
     padding: 15px;
     text-align: center;
-    background-color: #bdcee4;
-    border: solid 1px #4e8cdc;
+    background-color: var(--bg-sex-m);
+    border: solid 1px var(--my-blue);
     border-radius: 7px;
   }
 
   .m-active {
-    background-color: #4e8cdc !important;
+    background-color: var(--my-blue) !important;
   }
 
   & #w {
@@ -54,13 +54,13 @@ body {
     margin-left: 3%;
     padding: 15px;
     text-align: center;
-    background-color: #d2b3da;
-    border: solid 1px #b028d2;
+    background-color: var(--bg-sex-w);
+    border: solid 1px var(--my-purple);
     border-radius: 7px;
   }
 
   .w-active {
-    background-color: #b028d2 !important;
+    background-color: var(--my-purple) !important;
   }
   & #m:hover,
   & #w:hover {
@@ -110,7 +110,7 @@ body {
     font-weight: bold;
     padding: 15px 10px 15px 10px;
     color: white;
-    background-color: #26a259;
+    background-color: var(--btn-green);
     border: none;
     border-radius: 7px;
   }
@@ -124,7 +124,7 @@ body {
 
 .btn-pressed > ion-icon {
   font-size: 1.6rem !important;
-  background-color: #2691a2 !important;
+  background-color: var(--btn-pressed-blue) !important;
 }
 
 #box-result {
@@ -133,10 +133,16 @@ body {
   width: 40%;
   padding: 20px;
   margin: 20px;
-  background-color: white;
+  background-color: var(--box-content);
   border: solid 1px black;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
+
+  & #txt-result {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
 
   & #icon {
     font-size: 2rem;
@@ -163,12 +169,17 @@ body {
   & table {
     width: 70%;
     padding: 15px;
-    background-color: rgb(235, 235, 235);
+    margin-bottom: 25px;
+    background-color: var(--table);
     border-radius: 9px;
   }
 
   & > table > tbody > tr > td {
     padding: 8px 0 0 0;
+  }
+
+  & #txt-message {
+    font-size: 0.9rem;
   }
 }
 
@@ -178,7 +189,7 @@ body {
   padding: 3%;
 }
 
-#box-table {
+#box-table-info {
   width: 50%;
   margin-bottom: 5%;
   border: solid 1px black;
@@ -191,7 +202,7 @@ body {
   }
 
   & > table > thead {
-    background-color: #4e8cdc;
+    background-color: var(--my-blue);
     color: white;
   }
 
@@ -206,6 +217,20 @@ body {
   }
 
   tbody tr:nth-child(even) {
-    background-color: rgb(78, 140, 220, 0.1);
+    background-color: var(--my-blue-op);
   }
+}
+
+/* UTILS */
+:root {
+  --body: #f3f3f3;
+  --box-content: #fef9f2;
+  --bg-sex-m: #bdcee4;
+  --bg-sex-w: #d2b3da;
+  --my-blue: #4e8cdc;
+  --my-blue-op: #4e8cdc1a;
+  --my-purple: #b028d2;
+  --btn-green: #26a259;
+  --btn-pressed-blue: #2691a2;
+  --table: #ebebeb;
 }
