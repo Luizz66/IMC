@@ -1,34 +1,39 @@
 @font-face {
   font-family: "open-sans";
-  src: url("/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  src: url(./OpenSans-Regular.ttf) format(woff2);
+}
+
+@font-face {
+  font-family: "open-sans";
+  src: url(/fonts/OpenSans/OpenSans-Regular.ttf) format(woff2);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "open-sans";
-  src: url("/fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  src: url(/fonts/OpenSans/OpenSans-Bold.ttf) format(woff2);
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "open-sans";
-  src: url("/fonts/OpenSans/OpenSans-Italic.ttf") format("truetype");
+  src: url(/fonts/OpenSans/OpenSans-Italic.ttf) format(woff2);
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "open-sans";
-  src: url("/fonts/OpenSans/OpenSans-BoldItalic.ttf") format("truetype");
+  src: url(/fonts/OpenSans/OpenSans-BoldItalic.ttf) format(woff2);
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "open-sans";
-  src: url("/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  src: url(/fonts/OpenSans/OpenSans-SemiBold.ttf) format(woff2);
   font-weight: 600;
   font-style: normal;
 }
