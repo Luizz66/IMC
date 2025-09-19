@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "open-sans", "OpenSans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: var(--body);
 }
 
@@ -224,7 +224,7 @@ body {
 /* UTILS */
 :root {
   --body: #f3f3f3;
-  --box-content: #fef9f2;
+  --box-content: #fff5e7;
   --bg-sex-m: #bdcee4;
   --bg-sex-w: #d2b3da;
   --my-blue: #4e8cdc;
